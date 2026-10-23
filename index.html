@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OTECH Energy Solutions | Coming Soon</title>
+  <meta name="description" content="OTECH Energy Solutions provides indoor and outdoor metal fabrication, solar panels, inverters, BOS kits, conventional and ESE lightning protection, earthing solutions, EV chargers and electrical safety equipment in Bhubaneswar, Odisha.">
+  <meta name="theme-color" content="#071a2b">
+
+  <style>
+    :root {
+      --navy: #071a2b;
+      --blue: #123b60;
+      --green: #20b66b;
+      --gold: #f4b942;
+      --white: #ffffff;
+      --muted: #c4d2df;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--navy);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: white;
+      color: var(--navy);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 66px;
+      height: 66px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand-sub {
+      color: #15965a;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #36536c;
+      text-align: right;
+    }
+
+    .hero {
+      padding: 80px 7%;
+      background:
+        radial-gradient(ellipse at 80% 15%,
+          rgba(32,182,107,.22), transparent 40%),
+        linear-gradient(120deg, #071a2b, #123b60);
+    }
+
+    .hero-content { max-width: 900px; }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      border: 1px solid rgba(32,182,107,.65);
+      border-radius: 30px;
+      padding: 7px 16px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.13;
+      margin: 24px 0;
+    }
+
+    .highlight { color: var(--green); }
+
+    .hero p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      color: #041b10;
+      background: var(--green);
+    }
+
+    .btn-outline {
+      border: 1px solid #b6c7d5;
+      color: white;
+    }
+
+    .section { padding: 65px 6%; }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .services {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service {
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      color: var(--green);
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .why {
+      background: #0c253a;
+      text-align: center;
+    }
+
+    .why-grid {
+      max-width: 1050px;
+      margin: 30px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-item {
+      padding: 16px 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+    }
+
+    .why-item strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #123b60, #071a2b);
+    }
+
+    .contact-wrap {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 12px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .contact-card h3 {
+      color: var(--green);
+      margin-top: 0;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-line { margin: 15px 0; }
+
+    .contact-line strong {
+      display: block;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .contact-line a {
+      color: #d7e9f5;
+    }
+
+    .contact-line a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .footer {
+      padding: 26px 6%;
+      text-align: center;
+      color: #a9bac9;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .footer strong { color: white; }
+
+    @media (max-width: 800px) {
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .topbar { align-items: flex-start; }
+      .tagline { display: none; }
+      .brand-name { font-size: 21px; }
+      .hero { padding: 55px 6%; }
+      .hero p { font-size: 16px; }
+      .services, .contact-grid { grid-template-columns: 1fr; }
+      .section { padding: 48px 5%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="OTECH Energy Solutions home">
+      <!-- Upload your company logo as logo.png -->
+      <img class="logo" src="logo.png"
+           alt="OTECH Energy Solutions logo"
+           onerror="this.style.display='none'">
+      <div>
+        <div class="brand-name">OTECH</div>
+        <div class="brand-sub">ENERGY SOLUTIONS</div>
+      </div>
+    </a>
+
+    <div class="tagline">
+      Engineering Today<br>
+      for a Sustainable Tomorrow
+    </div>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">WEBSITE COMING SOON</div>
+
+        <h1>
+          Powering a Safer,<br>
+          <span class="highlight">Smarter Future.</span>
+        </h1>
+
+        <p>
+          OTECH Energy Solutions is a leading provider of outdoor
+          and indoor metal fabrication, solar energy products and
+          electrical safety equipment. We offer conventional and
+          ESE lightning protection, earthing solutions, EV chargers,
+          solar panels, inverters and complete Balance of System
+          (BOS) kits.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#solutions">
+            Our Products &amp; Solutions
+          </a>
+          <a class="btn btn-outline" href="#contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="section-heading">
+        <h2>
+          Comprehensive Solutions for a
+          <span class="highlight">Greener &amp; Safer Tomorrow</span>
+        </h2>
+        <p>
+          Products and solutions for industrial, commercial and
+          residential projects, with a focus on reliability and safety.
+        </p>
+      </div>
+
+      <div class="services">
+
+        <article class="service">
+          <div class="service-icon">⚙️</div>
+          <h3>Metal Fabrication</h3>
+          <p>
+            Indoor and outdoor metal fabrication for project-specific
+            requirements, installations and infrastructure.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">☀️</div>
+          <h3>Solar Energy Systems</h3>
+          <p>
+            Solar panels, inverters and complete BOS kits for renewable
+            energy installations and solar projects.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">⏚</div>
+          <h3>Earthing Solutions</h3>
+          <p>
+            Conventional earthing and grounding solutions to support
+            electrical safety and dependable installations.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">⚡</div>
+          <h3>Lightning Protection</h3>
+          <p>
+            Conventional and Early Streamer Emission (ESE) lightning
+            protection solutions for suitable applications.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">🔌</div>
+          <h3>EV Charging Equipment</h3>
+          <p>
+            Electric vehicle charging equipment for residential,
+            commercial and infrastructure applications.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">🛡️</div>
+          <h3>Electrical Safety Equipment</h3>
+          <p>
+            Electrical protection and safety products to help support
+            safer installations and reliable infrastructure.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="section-heading">
+        <h2>Why Choose <span class="highlight">OTECH?</span></h2>
+        <p>
+          Your partner for fabrication, renewable energy and electrical
+          safety solutions.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <strong>Quality Focus</strong>
+          Reliable products and practical solutions.
+        </div>
+        <div class="why-item">
+          <strong>Customer Focus</strong>
+          Solutions based on project requirements.
+        </div>
+        <div class="why-item">
+          <strong>Safety First</strong>
+          Focus on electrical safety and protection.
+        </div>
+        <div class="why-item">
+          <strong>Sustainable Future</strong>
+          Supporting solar energy adoption.
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-wrap">
+        <div class="section-heading">
+          <h2>We're Here to <span class="highlight">Help</span></h2>
+          <p>
+            Contact OTECH Energy Solutions for product enquiries,
+            quotations, fabrication requirements and project support.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <h3>Our Office</h3>
+
+            <div class="contact-line">
+              <strong>Business Address</strong>
+              Plot No 420/5000, Nageswar Tangi,<br>
+              Behind Ramakrishna Mission,<br>
+              Near Kalupada Sekha,<br>
+              Bhubaneswar, Odisha – 751002
+            </div>
+
+            <div class="contact-line">
+              <strong>Email Address</strong>
+              <a href="mailto:otechenergysolutions@gmail.com">
+                otechenergysolutions@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Get in Touch</h3>
+
+            <p>
+              Speak with our team about your requirements and
+              upcoming projects.
+            </p>
+
+            <div class="contact-line">
+              <strong>Contact Number 1</strong>
+              <a href="tel:+919439055446">09439055446</a>
+            </div>
+
+            <div class="contact-line">
+              <strong>Contact Number 2</strong>
+              <a href="tel:+918114371678">08114371678</a>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary"
+                 href="mailto:otechenergysolutions@gmail.com?subject=OTECH%20Energy%20Solutions%20Enquiry">
+                Send an Enquiry
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <strong>OTECH ENERGY SOLUTIONS</strong><br>
+    Metal Fabrication | Solar | Earthing | Lightning Protection |
+    EV Charging | Electrical Safety
+    <p>
+      Plot No 420/5000, Nageswar Tangi, Behind Ramakrishna Mission,
+      Near Kalupada Sekha, Bhubaneswar, Odisha – 751002
+    </p>
+    <p>
+      Email:
+      <a href="mailto:otechenergysolutions@gmail.com">
+        otechenergysolutions@gmail.com
+      </a>
+    </p>
+    <p>
+      © <span id="year">2026</span> OTECH Energy Solutions.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
